@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */; };
+		7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD090025434D3A008AADC0 /* ContentView.swift */; };
+		7BBD090325434D3E008AADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090225434D3E008AADC0 /* Assets.xcassets */; };
+		7BBD090625434D3E008AADC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090525434D3E008AADC0 /* Preview Assets.xcassets */; };
+		7BBD091125434D3E008AADC0 /* room_assistant_companionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD091025434D3E008AADC0 /* room_assistant_companionTests.swift */; };
+		7BBD091C25434D3E008AADC0 /* room_assistant_companionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD091B25434D3E008AADC0 /* room_assistant_companionUITests.swift */; };
+		7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD092F25435513008AADC0 /* BluetoothManager.swift */; };
+		7BE954B32545E63C00FFD7BF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BBD090D25434D3E008AADC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BBD08F325434D39008AADC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BBD08FA25434D3A008AADC0;
+			remoteInfo = "room-assistant companion";
+		};
+		7BBD091825434D3E008AADC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BBD08F325434D39008AADC0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BBD08FA25434D3A008AADC0;
+			remoteInfo = "room-assistant companion";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "room-assistant companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room_assistant_companionApp.swift; sourceTree = "<group>"; };
+		7BBD090025434D3A008AADC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7BBD090225434D3E008AADC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7BBD090525434D3E008AADC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7BBD090725434D3E008AADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BBD090C25434D3E008AADC0 /* room-assistant companionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "room-assistant companionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BBD091025434D3E008AADC0 /* room_assistant_companionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room_assistant_companionTests.swift; sourceTree = "<group>"; };
+		7BBD091225434D3E008AADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BBD091725434D3E008AADC0 /* room-assistant companionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "room-assistant companionUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BBD091B25434D3E008AADC0 /* room_assistant_companionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room_assistant_companionUITests.swift; sourceTree = "<group>"; };
+		7BBD091D25434D3E008AADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BBD092F25435513008AADC0 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
+		7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7BBD08F825434D3A008AADC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD090925434D3E008AADC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD091425434D3E008AADC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7BBD08F225434D39008AADC0 = {
+			isa = PBXGroup;
+			children = (
+				7BBD08FD25434D3A008AADC0 /* room-assistant companion */,
+				7BBD090F25434D3E008AADC0 /* room-assistant companionTests */,
+				7BBD091A25434D3E008AADC0 /* room-assistant companionUITests */,
+				7BBD08FC25434D3A008AADC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7BBD08FC25434D3A008AADC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */,
+				7BBD090C25434D3E008AADC0 /* room-assistant companionTests.xctest */,
+				7BBD091725434D3E008AADC0 /* room-assistant companionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7BBD08FD25434D3A008AADC0 /* room-assistant companion */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */,
+				7BBD090025434D3A008AADC0 /* ContentView.swift */,
+				7BBD090225434D3E008AADC0 /* Assets.xcassets */,
+				7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */,
+				7BBD090725434D3E008AADC0 /* Info.plist */,
+				7BBD090425434D3E008AADC0 /* Preview Content */,
+				7BBD092F25435513008AADC0 /* BluetoothManager.swift */,
+			);
+			path = "room-assistant companion";
+			sourceTree = "<group>";
+		};
+		7BBD090425434D3E008AADC0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD090525434D3E008AADC0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7BBD090F25434D3E008AADC0 /* room-assistant companionTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD091025434D3E008AADC0 /* room_assistant_companionTests.swift */,
+				7BBD091225434D3E008AADC0 /* Info.plist */,
+			);
+			path = "room-assistant companionTests";
+			sourceTree = "<group>";
+		};
+		7BBD091A25434D3E008AADC0 /* room-assistant companionUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD091B25434D3E008AADC0 /* room_assistant_companionUITests.swift */,
+				7BBD091D25434D3E008AADC0 /* Info.plist */,
+			);
+			path = "room-assistant companionUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7BBD08FA25434D3A008AADC0 /* room-assistant companion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BBD092025434D3E008AADC0 /* Build configuration list for PBXNativeTarget "room-assistant companion" */;
+			buildPhases = (
+				7BBD08F725434D3A008AADC0 /* Sources */,
+				7BBD08F825434D3A008AADC0 /* Frameworks */,
+				7BBD08F925434D3A008AADC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "room-assistant companion";
+			productName = "room-assistant companion";
+			productReference = 7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7BBD090B25434D3E008AADC0 /* room-assistant companionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BBD092325434D3E008AADC0 /* Build configuration list for PBXNativeTarget "room-assistant companionTests" */;
+			buildPhases = (
+				7BBD090825434D3E008AADC0 /* Sources */,
+				7BBD090925434D3E008AADC0 /* Frameworks */,
+				7BBD090A25434D3E008AADC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BBD090E25434D3E008AADC0 /* PBXTargetDependency */,
+			);
+			name = "room-assistant companionTests";
+			productName = "room-assistant companionTests";
+			productReference = 7BBD090C25434D3E008AADC0 /* room-assistant companionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7BBD091625434D3E008AADC0 /* room-assistant companionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BBD092625434D3E008AADC0 /* Build configuration list for PBXNativeTarget "room-assistant companionUITests" */;
+			buildPhases = (
+				7BBD091325434D3E008AADC0 /* Sources */,
+				7BBD091425434D3E008AADC0 /* Frameworks */,
+				7BBD091525434D3E008AADC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BBD091925434D3E008AADC0 /* PBXTargetDependency */,
+			);
+			name = "room-assistant companionUITests";
+			productName = "room-assistant companionUITests";
+			productReference = 7BBD091725434D3E008AADC0 /* room-assistant companionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7BBD08F325434D39008AADC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1210;
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					7BBD08FA25434D3A008AADC0 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					7BBD090B25434D3E008AADC0 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 7BBD08FA25434D3A008AADC0;
+					};
+					7BBD091625434D3E008AADC0 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = 7BBD08FA25434D3A008AADC0;
+					};
+				};
+			};
+			buildConfigurationList = 7BBD08F625434D39008AADC0 /* Build configuration list for PBXProject "room-assistant companion" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7BBD08F225434D39008AADC0;
+			productRefGroup = 7BBD08FC25434D3A008AADC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7BBD08FA25434D3A008AADC0 /* room-assistant companion */,
+				7BBD090B25434D3E008AADC0 /* room-assistant companionTests */,
+				7BBD091625434D3E008AADC0 /* room-assistant companionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7BBD08F925434D3A008AADC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BE954B32545E63C00FFD7BF /* Launch Screen.storyboard in Resources */,
+				7BBD090625434D3E008AADC0 /* Preview Assets.xcassets in Resources */,
+				7BBD090325434D3E008AADC0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD090A25434D3E008AADC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD091525434D3E008AADC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7BBD08F725434D3A008AADC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */,
+				7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */,
+				7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD090825434D3E008AADC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BBD091125434D3E008AADC0 /* room_assistant_companionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BBD091325434D3E008AADC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BBD091C25434D3E008AADC0 /* room_assistant_companionUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BBD090E25434D3E008AADC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BBD08FA25434D3A008AADC0 /* room-assistant companion */;
+			targetProxy = 7BBD090D25434D3E008AADC0 /* PBXContainerItemProxy */;
+		};
+		7BBD091925434D3E008AADC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BBD08FA25434D3A008AADC0 /* room-assistant companion */;
+			targetProxy = 7BBD091825434D3E008AADC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7BBD091E25434D3E008AADC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7BBD091F25434D3E008AADC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7BBD092125434D3E008AADC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_ASSET_PATHS = "\"room-assistant companion/Preview Content\"";
+				DEVELOPMENT_TEAM = ZV26KV426J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "room-assistant companion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heikorothe.room-assistant-companion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7BBD092225434D3E008AADC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_ASSET_PATHS = "\"room-assistant companion/Preview Content\"";
+				DEVELOPMENT_TEAM = ZV26KV426J;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "room-assistant companion/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heikorothe.room-assistant-companion";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		7BBD092425434D3E008AADC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV26KV426J;
+				INFOPLIST_FILE = "room-assistant companionTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heikorothe.room-assistant-companionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/room-assistant companion.app/room-assistant companion";
+			};
+			name = Debug;
+		};
+		7BBD092525434D3E008AADC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV26KV426J;
+				INFOPLIST_FILE = "room-assistant companionTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heikorothe.room-assistant-companionTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/room-assistant companion.app/room-assistant companion";
+			};
+			name = Release;
+		};
+		7BBD092725434D3E008AADC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV26KV426J;
+				INFOPLIST_FILE = "room-assistant companionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heikorothe.room-assistant-companionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "room-assistant companion";
+			};
+			name = Debug;
+		};
+		7BBD092825434D3E008AADC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZV26KV426J;
+				INFOPLIST_FILE = "room-assistant companionUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.heikorothe.room-assistant-companionUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "room-assistant companion";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7BBD08F625434D39008AADC0 /* Build configuration list for PBXProject "room-assistant companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BBD091E25434D3E008AADC0 /* Debug */,
+				7BBD091F25434D3E008AADC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BBD092025434D3E008AADC0 /* Build configuration list for PBXNativeTarget "room-assistant companion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BBD092125434D3E008AADC0 /* Debug */,
+				7BBD092225434D3E008AADC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BBD092325434D3E008AADC0 /* Build configuration list for PBXNativeTarget "room-assistant companionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BBD092425434D3E008AADC0 /* Debug */,
+				7BBD092525434D3E008AADC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BBD092625434D3E008AADC0 /* Build configuration list for PBXNativeTarget "room-assistant companionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BBD092725434D3E008AADC0 /* Debug */,
+				7BBD092825434D3E008AADC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7BBD08F325434D39008AADC0 /* Project object */;
+}
