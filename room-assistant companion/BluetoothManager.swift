@@ -24,7 +24,10 @@ class BluetoothManager: NSObject, CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
             addService()
-            startAdvertising()
+            
+            if (!UserDefaults.standard.bool(forKey: "autoToggleAdv")) {
+                startAdvertising()
+            }
         }
     }
     
@@ -39,7 +42,9 @@ class BluetoothManager: NSObject, CBPeripheralManagerDelegate {
             addService()
         }
         
-        startAdvertising()
+        if (!UserDefaults.standard.bool(forKey: "autoToggleAdv")) {
+            startAdvertising()
+        }
     }
     
     func addService() -> Void {
@@ -51,7 +56,17 @@ class BluetoothManager: NSObject, CBPeripheralManagerDelegate {
         peripheralManager!.add(raService)
     }
     
+    func removeService() {
+        peripheralManager?.removeAllServices()
+    }
+    
     func startAdvertising() -> Void {
-        peripheralManager!.startAdvertising([CBAdvertisementDataLocalNameKey: "room-assistant companion", CBAdvertisementDataServiceUUIDsKey: [raServiceId]])
+        if peripheralManager?.state == .poweredOn {
+            peripheralManager!.startAdvertising([CBAdvertisementDataLocalNameKey: "room-assistant companion", CBAdvertisementDataServiceUUIDsKey: [raServiceId]])
+        }
+    }
+    
+    func stopAdvertising() {
+        peripheralManager?.stopAdvertising()
     }
 }

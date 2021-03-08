@@ -26,6 +26,12 @@
 	<string>Used to allow discovery for room-assistant devices in background</string>
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Used to allow discovery for room-assistant devices</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

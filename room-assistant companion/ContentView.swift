@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    private var bluetoothManager: BluetoothManager = BluetoothManager.init()
-    private var deviceId: String
+    private let bluetoothManager: BluetoothManager = BluetoothManager.init()
+    private let locationManager: BeaconManager
+    private let deviceId: String
     
-    @State var justCopied = false
+    @State private var justCopied = false
+    @AppStorage("autoToggleAdv") private var autoToggleAdv = false
     
     init(deviceId: String) {
+        self.locationManager = BeaconManager(bluetoothManager: self.bluetoothManager)
         self.deviceId = deviceId
     }
     
@@ -48,6 +51,19 @@ struct ContentView: View {
                         }
                     }
             }
+            
+            Toggle(isOn: $autoToggleAdv, label: {
+                Text("Auto-Toggle Advertising")
+            }).padding()
+            .disabled(!self.locationManager.isMonitoringAvailable())
+            .onChange(of: autoToggleAdv, perform: { value in
+                if value {
+                    self.locationManager.startMonitoring()
+                } else {
+                    self.locationManager.stopMonitoring()
+                }
+            })
+
         }
     }
     

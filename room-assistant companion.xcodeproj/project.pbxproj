@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7BAFB3D625F51C6E00BA728B /* BeaconManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAFB3D525F51C6E00BA728B /* BeaconManager.swift */; };
 		7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */; };
 		7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD090025434D3A008AADC0 /* ContentView.swift */; };
 		7BBD090325434D3E008AADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090225434D3E008AADC0 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7BAFB3D525F51C6E00BA728B /* BeaconManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaconManager.swift; sourceTree = "<group>"; };
 		7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "room-assistant companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room_assistant_companionApp.swift; sourceTree = "<group>"; };
 		7BBD090025434D3A008AADC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7BBD090725434D3E008AADC0 /* Info.plist */,
 				7BBD090425434D3E008AADC0 /* Preview Content */,
 				7BBD092F25435513008AADC0 /* BluetoothManager.swift */,
+				7BAFB3D525F51C6E00BA728B /* BeaconManager.swift */,
 			);
 			path = "room-assistant companion";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BAFB3D625F51C6E00BA728B /* BeaconManager.swift in Sources */,
 				7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */,
 				7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */,
 				7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */,
@@ -426,7 +430,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"room-assistant companion/Preview Content\"";
 				DEVELOPMENT_TEAM = ZV26KV426J;
 				ENABLE_PREVIEWS = YES;
@@ -450,7 +454,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"room-assistant companion/Preview Content\"";
 				DEVELOPMENT_TEAM = ZV26KV426J;
 				ENABLE_PREVIEWS = YES;
