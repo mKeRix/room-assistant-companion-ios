@@ -19,8 +19,6 @@ class BluetoothManager: NSObject {
     private let locationManager: CLLocationManager = CLLocationManager()
     private let region = CLBeaconRegion(uuid: UUID(uuidString: "D1338ACE-002D-44AF-88D1-E57C12484966")!, identifier: "io.room-assistant.instance")
     
-    private var beaconNearby: Bool = false
-    
     private let logger: Logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: BluetoothManager.self))
     
     override init() {
@@ -31,8 +29,8 @@ class BluetoothManager: NSObject {
         locationManager.delegate = self
     }
     
-    func shouldBeAdvertising() -> Bool {
-        return !UserDefaults.standard.bool(forKey: "autoToggleAdv") || beaconNearby
+    func isAdvAutoTogglingEnabled() -> Bool {
+        return UserDefaults.standard.bool(forKey: "autoToggleAdv")
     }
     
     func startAdvertising() -> Void {
@@ -41,10 +39,6 @@ class BluetoothManager: NSObject {
         let raService = CBMutableService(type: raServiceId, primary: true)
         raService.characteristics = [raCharacteristic]
         peripheralManager!.add(raService)
-        
-        if peripheralManager!.state == .poweredOn {
-            peripheralManager!.startAdvertising([CBAdvertisementDataLocalNameKey: "room-assistant companion", CBAdvertisementDataServiceUUIDsKey: [raServiceId]])
-        }
     }
     
     func stopAdvertising() {
@@ -83,14 +77,24 @@ class BluetoothManager: NSObject {
 
 extension BluetoothManager: CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
-        if (peripheral.state == .poweredOn && self.shouldBeAdvertising()) {
-            self.logger.log("Starting advertising due to event: went into poweredOn state")
-            startAdvertising()
+        self.logger.log("Peripheral manager entered state \(peripheral.state.rawValue)")
+        
+        if (peripheral.state == .poweredOn) {
+            if self.isAdvAutoTogglingEnabled() {
+                self.logger.log("Starting ranging due to event: went into poweredOn state")
+                searchBeacon()
+            } else {
+                self.logger.log("Starting advertising due to event: went into poweredOn state")
+                startAdvertising()
+            }
         }
     }
     
     func peripheralManager(_ peripheral: CBPeripheralManager, willRestoreState dict: [String : Any]) {
-        if (self.shouldBeAdvertising()) {
+        if (self.isAdvAutoTogglingEnabled()) {
+            self.logger.log("Starting ranging due to event: went into poweredOn state")
+            searchBeacon()
+        } else {
             self.logger.log("Starting advertising due to event: restored peripheral manager")
             startAdvertising()
         }
@@ -99,8 +103,17 @@ extension BluetoothManager: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, didAdd service: CBService, error: Error?) {
         if error != nil {
             self.logger.error("Error when adding service \(service.uuid): \(error.debugDescription)")
-        } else {
-            self.logger.log("Succesfully added service \(service.uuid)")
+            return
+        }
+        
+        self.logger.log("Succesfully added service \(service.uuid)")
+        
+        if peripheral.isAdvertising {
+            peripheral.stopAdvertising()
+        }
+        
+        if peripheral.state == .poweredOn {
+            peripheralManager!.startAdvertising([CBAdvertisementDataLocalNameKey: "room-assistant companion", CBAdvertisementDataServiceUUIDsKey: [raServiceId]])
         }
     }
     
@@ -117,7 +130,7 @@ extension BluetoothManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         if manager.authorizationStatus == .denied || manager.authorizationStatus == .restricted || manager.authorizationStatus == .authorizedWhenInUse {
             UserDefaults.standard.set(false, forKey: "autoToggleAdv")
-            self.logger.log("Starting advertising due to event: authorizationStatus went into \(String(describing: manager.authorizationStatus))")
+            self.logger.log("Starting advertising due to event: authorizationStatus went into \(manager.authorizationStatus.rawValue)")
             startAdvertising()
         }
     }
@@ -126,14 +139,12 @@ extension BluetoothManager: CLLocationManagerDelegate {
         self.logger.log("Starting advertising due to event: entered beacon region")
 
         startAdvertising()
-        beaconNearby = true
     }
     
     func locationManager(_ manager: CLLocationManager, didExitRegion region: CLRegion) {
         self.logger.log("Stopping advertising due to event: exited beacon region")
         
         stopAdvertising()
-        beaconNearby = false
     }
     
     func locationManager(_ manager: CLLocationManager, didRange beacons: [CLBeacon], satisfying beaconConstraint: CLBeaconIdentityConstraint) {
