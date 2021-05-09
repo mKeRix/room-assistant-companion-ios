@@ -20,7 +20,7 @@ struct room_assistant_companionApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(deviceId: UIDevice.current.identifierForVendor?.uuidString ?? "no device id")
+            MainView()
         }
         .onChange(of: scenePhase) { (newScenePhase) in
             if (newScenePhase == .background) {

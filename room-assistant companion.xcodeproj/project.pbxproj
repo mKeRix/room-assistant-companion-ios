@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B3E098F264830D6000537AF /* InstanceRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E098E264830D6000537AF /* InstanceRow.swift */; };
+		7B3E099126483114000537AF /* Instance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099026483114000537AF /* Instance.swift */; };
+		7B3E099326483587000537AF /* InstanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099226483587000537AF /* InstanceDetailView.swift */; };
+		7B3E0997264837CC000537AF /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E0996264837CC000537AF /* Entity.swift */; };
+		7B3E099926483B3B000537AF /* InstanceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099826483B3B000537AF /* InstanceClient.swift */; };
+		7B3E099D26483E13000537AF /* EntityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099C26483E13000537AF /* EntityRow.swift */; };
 		7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */; };
-		7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD090025434D3A008AADC0 /* ContentView.swift */; };
+		7BBD090125434D3A008AADC0 /* AdvertisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD090025434D3A008AADC0 /* AdvertisingView.swift */; };
 		7BBD090325434D3E008AADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090225434D3E008AADC0 /* Assets.xcassets */; };
 		7BBD090625434D3E008AADC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090525434D3E008AADC0 /* Preview Assets.xcassets */; };
 		7BBD091125434D3E008AADC0 /* room_assistant_companionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD091025434D3E008AADC0 /* room_assistant_companionTests.swift */; };
@@ -16,6 +22,9 @@
 		7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD092F25435513008AADC0 /* BluetoothManager.swift */; };
 		7BE954B32545E63C00FFD7BF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */; };
 		7BECDA8D2647E5C400FC8023 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA8C2647E5C400FC8023 /* TaskManager.swift */; };
+		7BECDA8F2647F12D00FC8023 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA8E2647F12D00FC8023 /* MainView.swift */; };
+		7BECDA912647F37B00FC8023 /* InstanceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA902647F37B00FC8023 /* InstanceBrowserView.swift */; };
+		7BECDA932647F43D00FC8023 /* InstanceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA922647F43D00FC8023 /* InstanceBrowser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B3E098E264830D6000537AF /* InstanceRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceRow.swift; sourceTree = "<group>"; };
+		7B3E099026483114000537AF /* Instance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instance.swift; sourceTree = "<group>"; };
+		7B3E099226483587000537AF /* InstanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailView.swift; sourceTree = "<group>"; };
+		7B3E0996264837CC000537AF /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		7B3E099826483B3B000537AF /* InstanceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceClient.swift; sourceTree = "<group>"; };
+		7B3E099C26483E13000537AF /* EntityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityRow.swift; sourceTree = "<group>"; };
 		7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "room-assistant companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room_assistant_companionApp.swift; sourceTree = "<group>"; };
-		7BBD090025434D3A008AADC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7BBD090025434D3A008AADC0 /* AdvertisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingView.swift; sourceTree = "<group>"; };
 		7BBD090225434D3E008AADC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BBD090525434D3E008AADC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7BBD090725434D3E008AADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,6 +66,9 @@
 		7BBD092F25435513008AADC0 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		7BECDA8C2647E5C400FC8023 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
+		7BECDA8E2647F12D00FC8023 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		7BECDA902647F37B00FC8023 /* InstanceBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceBrowserView.swift; sourceTree = "<group>"; };
+		7BECDA922647F43D00FC8023 /* InstanceBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceBrowser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B3E099E26484E0B000537AF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7BECDA8E2647F12D00FC8023 /* MainView.swift */,
+				7BBD090025434D3A008AADC0 /* AdvertisingView.swift */,
+				7B3E098E264830D6000537AF /* InstanceRow.swift */,
+				7B3E099226483587000537AF /* InstanceDetailView.swift */,
+				7BECDA902647F37B00FC8023 /* InstanceBrowserView.swift */,
+				7B3E099C26483E13000537AF /* EntityRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7B3E099F26484E3A000537AF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7B3E099026483114000537AF /* Instance.swift */,
+				7B3E0996264837CC000537AF /* Entity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7B3E09A026484E59000537AF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				7BBD092F25435513008AADC0 /* BluetoothManager.swift */,
+				7BECDA8C2647E5C400FC8023 /* TaskManager.swift */,
+				7BECDA922647F43D00FC8023 /* InstanceBrowser.swift */,
+				7B3E099826483B3B000537AF /* InstanceClient.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		7BBD08F225434D39008AADC0 = {
 			isa = PBXGroup;
 			children = (
@@ -101,14 +152,14 @@
 		7BBD08FD25434D3A008AADC0 /* room-assistant companion */ = {
 			isa = PBXGroup;
 			children = (
+				7B3E09A026484E59000537AF /* Services */,
+				7B3E099F26484E3A000537AF /* Model */,
+				7B3E099E26484E0B000537AF /* Views */,
 				7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */,
-				7BBD090025434D3A008AADC0 /* ContentView.swift */,
 				7BBD090225434D3E008AADC0 /* Assets.xcassets */,
 				7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */,
 				7BBD090725434D3E008AADC0 /* Info.plist */,
 				7BBD090425434D3E008AADC0 /* Preview Content */,
-				7BBD092F25435513008AADC0 /* BluetoothManager.swift */,
-				7BECDA8C2647E5C400FC8023 /* TaskManager.swift */,
 			);
 			path = "room-assistant companion";
 			sourceTree = "<group>";
@@ -155,6 +206,8 @@
 			dependencies = (
 			);
 			name = "room-assistant companion";
+			packageProductDependencies = (
+			);
 			productName = "room-assistant companion";
 			productReference = 7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */;
 			productType = "com.apple.product-type.application";
@@ -226,6 +279,8 @@
 				Base,
 			);
 			mainGroup = 7BBD08F225434D39008AADC0;
+			packageReferences = (
+			);
 			productRefGroup = 7BBD08FC25434D3A008AADC0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -269,10 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */,
+				7B3E098F264830D6000537AF /* InstanceRow.swift in Sources */,
+				7BBD090125434D3A008AADC0 /* AdvertisingView.swift in Sources */,
 				7BECDA8D2647E5C400FC8023 /* TaskManager.swift in Sources */,
 				7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */,
+				7B3E099126483114000537AF /* Instance.swift in Sources */,
+				7BECDA8F2647F12D00FC8023 /* MainView.swift in Sources */,
+				7BECDA912647F37B00FC8023 /* InstanceBrowserView.swift in Sources */,
+				7B3E099926483B3B000537AF /* InstanceClient.swift in Sources */,
+				7B3E0997264837CC000537AF /* Entity.swift in Sources */,
 				7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */,
+				7B3E099D26483E13000537AF /* EntityRow.swift in Sources */,
+				7BECDA932647F43D00FC8023 /* InstanceBrowser.swift in Sources */,
+				7B3E099326483587000537AF /* InstanceDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AdvertisingView: View {
     private let deviceId: String
     
     @State private var justCopied = false
@@ -69,6 +69,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(deviceId: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")
+        AdvertisingView(deviceId: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX")
     }
 }
