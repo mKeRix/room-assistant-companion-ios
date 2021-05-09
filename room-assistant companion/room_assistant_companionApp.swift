@@ -10,9 +10,22 @@ import UIKit
 
 @main
 struct room_assistant_companionApp: App {
+    @Environment(\.scenePhase) private var scenePhase
+    
+    private let taskManager = TaskManager.init()
+    
+    init() {
+        taskManager.registerBleAdvertisingCheck()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView(deviceId: UIDevice.current.identifierForVendor?.uuidString ?? "no device id")
+        }
+        .onChange(of: scenePhase) { (newScenePhase) in
+            if (newScenePhase == .background) {
+                taskManager.scheduleBleAdvertisingCheck()
+            }
         }
     }
 }

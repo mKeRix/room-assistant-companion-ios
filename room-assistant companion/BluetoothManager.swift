@@ -11,6 +11,8 @@ import CoreLocation
 import os
 
 class BluetoothManager: NSObject {
+    static let shared = BluetoothManager.init()
+    
     private var peripheralManager: CBPeripheralManager?
     private let raCharacteristicId: CBUUID = CBUUID(nsuuid: UUID(uuidString: "21c46f33-e813-4407-8601-2ad281030052")!)
     private let raServiceId: CBUUID = CBUUID(nsuuid: UUID(uuidString: "5403c8a7-5c96-47e9-9ab8-59e373d875a7")!)
@@ -18,6 +20,8 @@ class BluetoothManager: NSObject {
     
     private let locationManager: CLLocationManager = CLLocationManager()
     private let region = CLBeaconRegion(uuid: UUID(uuidString: "D1338ACE-002D-44AF-88D1-E57C12484966")!, identifier: "io.room-assistant.instance")
+    
+    private var isAdvertising = false
     
     private let logger: Logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: String(describing: BluetoothManager.self))
     
@@ -44,6 +48,16 @@ class BluetoothManager: NSObject {
     func stopAdvertising() {
         peripheralManager!.stopAdvertising()
         peripheralManager!.removeAllServices()
+        self.isAdvertising = false
+    }
+    
+    func ensureAdvertisingState() {
+        self.logger.log("Should advertise: \(self.isAdvertising), is advertising: \(self.peripheralManager!.isAdvertising)")
+        
+        if self.isAdvertising && !peripheralManager!.isAdvertising {
+            self.logger.log("Found peripheral manager not advertising although it should have been, starting again")
+            self.startAdvertising()
+        }
     }
     
     func enableAdvAutoToggling() {
@@ -122,6 +136,7 @@ extension BluetoothManager: CBPeripheralManagerDelegate {
             self.logger.error("Error when starting advertising: \(error.debugDescription)")
         } else {
             self.logger.log("Succesfully started advertising")
+            self.isAdvertising = true
         }
     }
 }

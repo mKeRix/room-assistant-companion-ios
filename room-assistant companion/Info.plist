@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.heikorothe.ensureBleAdvertisingState</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
@@ -27,11 +31,11 @@
 	<key>NSBluetoothPeripheralUsageDescription</key>
 	<string>Used to allow discovery for room-assistant devices</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
+	<string>room-assistant uses your location to automatically toggle the advertising when you&apos;re away from home.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
+	<string>room-assistant uses your location to automatically toggle the advertising when you&apos;re away from home.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
+	<string>room-assistant uses your location to automatically toggle the advertising when you&apos;re away from home.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -42,6 +46,7 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-peripheral</string>
+		<string>fetch</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict/>

@@ -15,6 +15,7 @@
 		7BBD091C25434D3E008AADC0 /* room_assistant_companionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD091B25434D3E008AADC0 /* room_assistant_companionUITests.swift */; };
 		7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD092F25435513008AADC0 /* BluetoothManager.swift */; };
 		7BE954B32545E63C00FFD7BF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */; };
+		7BECDA8D2647E5C400FC8023 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA8C2647E5C400FC8023 /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		7BBD091D25434D3E008AADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BBD092F25435513008AADC0 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		7BECDA8C2647E5C400FC8023 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				7BBD090725434D3E008AADC0 /* Info.plist */,
 				7BBD090425434D3E008AADC0 /* Preview Content */,
 				7BBD092F25435513008AADC0 /* BluetoothManager.swift */,
+				7BECDA8C2647E5C400FC8023 /* TaskManager.swift */,
 			);
 			path = "room-assistant companion";
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BBD090125434D3A008AADC0 /* ContentView.swift in Sources */,
+				7BECDA8D2647E5C400FC8023 /* TaskManager.swift in Sources */,
 				7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */,
 				7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */,
 			);

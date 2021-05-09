@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    private let bluetoothManager: BluetoothManager = BluetoothManager.init()
     private let deviceId: String
     
     @State private var justCopied = false
@@ -53,12 +52,12 @@ struct ContentView: View {
             Toggle(isOn: $autoToggleAdv, label: {
                 Text("Auto-Toggle Advertising")
             }).padding()
-            .disabled(!self.bluetoothManager.isMonitoringAvailable())
+            .disabled(!BluetoothManager.shared.isMonitoringAvailable())
             .onChange(of: autoToggleAdv, perform: { value in
                 if value {
-                    self.bluetoothManager.enableAdvAutoToggling()
+                    BluetoothManager.shared.enableAdvAutoToggling()
                 } else {
-                    self.bluetoothManager.disableAdvAutoToggling()
+                    BluetoothManager.shared.disableAdvAutoToggling()
                 }
             })
 
