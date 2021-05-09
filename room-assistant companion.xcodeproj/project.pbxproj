@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		7B3E0997264837CC000537AF /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E0996264837CC000537AF /* Entity.swift */; };
 		7B3E099926483B3B000537AF /* InstanceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099826483B3B000537AF /* InstanceClient.swift */; };
 		7B3E099D26483E13000537AF /* EntityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099C26483E13000537AF /* EntityRow.swift */; };
+		7B3E09A626486CFB000537AF /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 7B3E09A526486CFB000537AF /* Starscream */; };
 		7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */; };
 		7BBD090125434D3A008AADC0 /* AdvertisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD090025434D3A008AADC0 /* AdvertisingView.swift */; };
 		7BBD090325434D3E008AADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090225434D3E008AADC0 /* Assets.xcassets */; };
@@ -76,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B3E09A626486CFB000537AF /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +209,7 @@
 			);
 			name = "room-assistant companion";
 			packageProductDependencies = (
+				7B3E09A526486CFB000537AF /* Starscream */,
 			);
 			productName = "room-assistant companion";
 			productReference = 7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */;
@@ -280,6 +283,7 @@
 			);
 			mainGroup = 7BBD08F225434D39008AADC0;
 			packageReferences = (
+				7B3E09A426486CFB000537AF /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = 7BBD08FC25434D3A008AADC0 /* Products */;
 			projectDirPath = "";
@@ -660,6 +664,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7B3E09A426486CFB000537AF /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7B3E09A526486CFB000537AF /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7B3E09A426486CFB000537AF /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7BBD08F325434D39008AADC0 /* Project object */;
 }

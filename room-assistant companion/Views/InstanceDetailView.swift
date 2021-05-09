@@ -8,26 +8,24 @@
 import SwiftUI
 
 struct InstanceDetailView: View {
-    @State var entities: [Entity] = []
-    @State private var isRefreshing = false
+    @StateObject var client = InstanceClient()
     
     var instance: Instance
     
     var body: some View {
         VStack {
-            if (isRefreshing) {
+            if (client.isRefreshing) {
                 ProgressView()
             }
             
-            List(entities) { entity in
+            List(Array(client.entities)) { entity in
                 EntityRow(entity: entity)
             }
             .onAppear() {
-                isRefreshing = true
-                InstanceClient(instance: instance).retrieveEntities { entities in
-                    self.entities = entities
-                    isRefreshing = false
-                }
+                client.populateEntities(instance: instance)
+            }
+            .onDisappear() {
+                client.cleanUp()
             }
             .navigationTitle(instance.id.components(separatedBy: ".")[0])
         }
