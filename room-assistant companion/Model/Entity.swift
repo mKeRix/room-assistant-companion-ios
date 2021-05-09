@@ -28,6 +28,8 @@ struct Entity: Identifiable {
     let id: String
     let name: String
     var state: EntityState?
+    
+    var distances: [String: DistanceMeasurement]?
 }
 
 extension Entity: Decodable {
@@ -35,6 +37,7 @@ extension Entity: Decodable {
         case id
         case name
         case state
+        case distances
     }
     
     init(from decoder: Decoder) throws {
@@ -49,5 +52,12 @@ extension Entity: Decodable {
         } else if let v = try? values.decode(String.self, forKey: .state) {
             state = .string(v)
         }
+        
+        distances = try? values.decode([String: DistanceMeasurement].self, forKey: .distances)
     }
+}
+
+struct DistanceMeasurement: Codable {
+    let distance: Double
+    let outOfRange: Bool
 }
