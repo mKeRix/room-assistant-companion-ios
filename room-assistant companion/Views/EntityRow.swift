@@ -31,7 +31,7 @@ struct EntityRow: View {
                 ForEach(entity.distances!.sorted(by: {$0.key < $1.key}), id: \.key) { key, value in
                     Text("\(key): \(String(format: "%.1f", value.distance)) m")
                         .font(.caption)
-                        .foregroundColor(value.outOfRange ? .red : .black)
+                        .foregroundColor(value.outOfRange ? .red : .primary)
                 }
             }
         }
