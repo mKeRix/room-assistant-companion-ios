@@ -17,11 +17,18 @@ struct InstanceBrowserView: View {
                     InstanceRow(instance: instance)
                 }
             }
-            .onAppear {
-                browser.findInstances()
-            }
+            .onAppear(perform: refresh)
             .navigationTitle("Instances")
+            .toolbar(content: {
+                Button(action: refresh) {
+                    Image(systemName: "arrow.clockwise")
+                }
+            })
         }
+    }
+    
+    func refresh() {
+        browser.findInstances()
     }
 }
 
