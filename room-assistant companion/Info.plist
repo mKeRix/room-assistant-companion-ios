@@ -33,11 +33,11 @@
 	<key>NSLocalNetworkUsageDescription</key>
 	<string>Used to find room-assistant instances in your network</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>room-assistant uses your location to automatically toggle the advertising when you&apos;re away from home.</string>
+	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>room-assistant uses your location to automatically toggle the advertising when you&apos;re away from home.</string>
+	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>room-assistant uses your location to automatically toggle the advertising when you&apos;re away from home.</string>
+	<string>room-assistant uses your location to automatically toggle the advertising when you're away from home.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -48,7 +48,6 @@
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>bluetooth-peripheral</string>
-		<string>fetch</string>
 	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
