@@ -23,7 +23,6 @@
 		7BBD091C25434D3E008AADC0 /* room_assistant_companionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD091B25434D3E008AADC0 /* room_assistant_companionUITests.swift */; };
 		7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD092F25435513008AADC0 /* BluetoothManager.swift */; };
 		7BE954B32545E63C00FFD7BF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */; };
-		7BECDA8D2647E5C400FC8023 /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA8C2647E5C400FC8023 /* TaskManager.swift */; };
 		7BECDA8F2647F12D00FC8023 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA8E2647F12D00FC8023 /* MainView.swift */; };
 		7BECDA912647F37B00FC8023 /* InstanceBrowserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA902647F37B00FC8023 /* InstanceBrowserView.swift */; };
 		7BECDA932647F43D00FC8023 /* InstanceBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BECDA922647F43D00FC8023 /* InstanceBrowser.swift */; };
@@ -68,7 +67,6 @@
 		7BBD091D25434D3E008AADC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BBD092F25435513008AADC0 /* BluetoothManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothManager.swift; sourceTree = "<group>"; };
 		7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
-		7BECDA8C2647E5C400FC8023 /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		7BECDA8E2647F12D00FC8023 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		7BECDA902647F37B00FC8023 /* InstanceBrowserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceBrowserView.swift; sourceTree = "<group>"; };
 		7BECDA922647F43D00FC8023 /* InstanceBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceBrowser.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 			isa = PBXGroup;
 			children = (
 				7BBD092F25435513008AADC0 /* BluetoothManager.swift */,
-				7BECDA8C2647E5C400FC8023 /* TaskManager.swift */,
 				7BECDA922647F43D00FC8023 /* InstanceBrowser.swift */,
 				7B3E099826483B3B000537AF /* InstanceClient.swift */,
 			);
@@ -333,7 +330,6 @@
 			files = (
 				7B3E098F264830D6000537AF /* InstanceRow.swift in Sources */,
 				7BBD090125434D3A008AADC0 /* AdvertisingView.swift in Sources */,
-				7BECDA8D2647E5C400FC8023 /* TaskManager.swift in Sources */,
 				7BBD093025435513008AADC0 /* BluetoothManager.swift in Sources */,
 				7B3E099126483114000537AF /* Instance.swift in Sources */,
 				7BECDA8F2647F12D00FC8023 /* MainView.swift in Sources */,
