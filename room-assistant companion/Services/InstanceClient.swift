@@ -11,6 +11,7 @@ import os
 
 class InstanceClient: NSObject, ObservableObject {
     @Published var isRefreshing = false
+    @Published var experiencedError = false
     @Published var entities: [Entity] = []
     
     private var socket: WebSocket?
@@ -30,15 +31,17 @@ class InstanceClient: NSObject, ObservableObject {
     }
     
     private func retrieveEntities(instance: Instance, finished:@escaping () -> ()) {
-        guard let url = URL(string: "http://\(instance.ipAddress):\(String(instance.port))/entities") else {
-            self.logger.error("Invalid URL")
-            return
-        }
-        let request = URLRequest(url: url)
+        let entitiesEndpoint = instance.address.appendingPathComponent("/entities")
+        let request = URLRequest(url: entitiesEndpoint)
         
         isRefreshing = true
         
         URLSession.shared.dataTask(with: request) { data, response, error in
+            if error != nil {
+                self.experiencedError = true
+                return
+            }
+            
             if let data = data {
                 if let response = try? JSONDecoder().decode([Entity].self, from: data) {
                     DispatchQueue.main.async {
@@ -52,11 +55,7 @@ class InstanceClient: NSObject, ObservableObject {
     }
     
     private func connectSocket(instance: Instance) {
-        guard let url = URL(string: "http://\(instance.ipAddress):\(String(instance.port))") else {
-            self.logger.error("Invalid URL")
-            return
-        }
-        var request = URLRequest(url: url)
+        var request = URLRequest(url: instance.address)
         request.timeoutInterval = 5
         
         socket = WebSocket(request: request)
@@ -86,6 +85,8 @@ extension InstanceClient: WebSocketDelegate {
                     self.entities.append(update.entity)
                 }
             }
+        case .error(_) :
+            self.experiencedError = true
         default:
             break
         }

@@ -57,11 +57,16 @@ extension InstanceBrowser: NetServiceDelegate {
                 }
             }
         let ipAddress = String(cString:hostname)
-        let friendlyName = sender.hostName ?? "unknown"
+        let friendlyName = sender.hostName?.components(separatedBy: ".")[0]
 
         if ipAddress.isValidIpAddress {
             // IPv4 address
-            instances.append(Instance(id: friendlyName, ipAddress: ipAddress, port: sender.port))
+            var address = URLComponents()
+            address.scheme = "http"
+            address.host = ipAddress
+            address.port = sender.port
+            
+            instances.append(Instance(id: UUID(), address: address.url!, friendlyName: friendlyName))
         }
     }
 }
@@ -69,6 +74,10 @@ extension InstanceBrowser: NetServiceDelegate {
 extension String {
     var isValidIpAddress: Bool {
         return self.matches(pattern: "^(([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])\\.){3}([0-9]|[1-9][0-9]|1[0-9]{2}|2[0-4][0-9]|25[0-5])$")
+    }
+    
+    var isValidUrl: Bool {
+        return self.matches(pattern: "((http|https)://)?((\\w)*|([0-9]*)|([-|_])*)+([\\.|/]((\\w)*|([0-9]*)|([-|_])*))+")
     }
     
     private func matches(pattern: String) -> Bool {

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct InstanceDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
+    
     @StateObject var client = InstanceClient()
     
     var instance: Instance
@@ -27,7 +29,10 @@ struct InstanceDetailView: View {
             .onDisappear() {
                 client.cleanUp()
             }
-            .navigationTitle(instance.id.components(separatedBy: ".")[0])
+            .alert(isPresented: $client.experiencedError) {
+                Alert(title: Text("Connection Error"), message: Text("Check if the specified address is correct and make sure that your phone has access to it."), dismissButton: .cancel { presentationMode.wrappedValue.dismiss() })
+            }
+            .navigationTitle(instance.friendlyName ?? "Entities")
         }
         
     }
@@ -35,6 +40,6 @@ struct InstanceDetailView: View {
 
 struct InstanceDetail_Previews: PreviewProvider {
     static var previews: some View {
-        InstanceDetailView(instance: Instance(id: "kitchen.local.", ipAddress: "192.168.0.1", port: 6425))
+        InstanceDetailView(instance: Instance(id: UUID(), address: URL(string: "192.168.0.1:6425")!))
     }
 }

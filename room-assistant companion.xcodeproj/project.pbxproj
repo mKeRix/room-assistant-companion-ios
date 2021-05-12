@@ -14,6 +14,7 @@
 		7B3E099926483B3B000537AF /* InstanceClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099826483B3B000537AF /* InstanceClient.swift */; };
 		7B3E099D26483E13000537AF /* EntityRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B3E099C26483E13000537AF /* EntityRow.swift */; };
 		7B3E09A626486CFB000537AF /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 7B3E09A526486CFB000537AF /* Starscream */; };
+		7B4847A5264C410600BA4A4F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4847A4264C410600BA4A4F /* Util.swift */; };
 		7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */; };
 		7BBD090125434D3A008AADC0 /* AdvertisingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BBD090025434D3A008AADC0 /* AdvertisingView.swift */; };
 		7BBD090325434D3E008AADC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BBD090225434D3E008AADC0 /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		7B3E0996264837CC000537AF /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
 		7B3E099826483B3B000537AF /* InstanceClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceClient.swift; sourceTree = "<group>"; };
 		7B3E099C26483E13000537AF /* EntityRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityRow.swift; sourceTree = "<group>"; };
+		7B4847A4264C410600BA4A4F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		7BBD08FB25434D3A008AADC0 /* room-assistant companion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "room-assistant companion.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BBD08FE25434D3A008AADC0 /* room_assistant_companionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = room_assistant_companionApp.swift; sourceTree = "<group>"; };
 		7BBD090025434D3A008AADC0 /* AdvertisingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvertisingView.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				7BE954B22545E63C00FFD7BF /* Launch Screen.storyboard */,
 				7BBD090725434D3E008AADC0 /* Info.plist */,
 				7BBD090425434D3E008AADC0 /* Preview Content */,
+				7B4847A4264C410600BA4A4F /* Util.swift */,
 			);
 			path = "room-assistant companion";
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 				7B3E0997264837CC000537AF /* Entity.swift in Sources */,
 				7BBD08FF25434D3A008AADC0 /* room_assistant_companionApp.swift in Sources */,
 				7B3E099D26483E13000537AF /* EntityRow.swift in Sources */,
+				7B4847A5264C410600BA4A4F /* Util.swift in Sources */,
 				7BECDA932647F43D00FC8023 /* InstanceBrowser.swift in Sources */,
 				7B3E099326483587000537AF /* InstanceDetailView.swift in Sources */,
 			);

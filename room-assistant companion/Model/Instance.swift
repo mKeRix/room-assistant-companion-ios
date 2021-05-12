@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Instance: Identifiable {
-    var id: String
-    var ipAddress: String
-    var port: Int
+struct Instance: Identifiable, Codable {
+    var id: UUID
+    var address: URL
+    var friendlyName: String?
 }
